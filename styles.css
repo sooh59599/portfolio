@@ -45,7 +45,6 @@ body {
     backdrop-filter: blur(10px);
     box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
     z-index: 1000;
-    transition: all 0.3s ease;
 }
 
 .navbar .container {
@@ -74,7 +73,6 @@ body {
     text-decoration: none;
     color: var(--text-dark);
     font-weight: 500;
-    transition: color 0.3s ease;
     position: relative;
 }
 
@@ -86,7 +84,6 @@ body {
     width: 0;
     height: 2px;
     background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-    transition: width 0.3s ease;
 }
 
 .nav-link:hover {
@@ -107,12 +104,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: transform 0.3s ease;
     margin-left: 1rem;
-}
-
-.theme-toggle:hover {
-    transform: scale(1.1);
 }
 
 .theme-toggle .sun-icon,
@@ -202,7 +194,6 @@ body.dark-mode .theme-toggle .moon-icon {
     border-radius: 50px;
     text-decoration: none;
     font-weight: 600;
-    transition: all 0.3s ease;
     display: inline-block;
     border: 2px solid transparent;
 }
@@ -212,21 +203,10 @@ body.dark-mode .theme-toggle .moon-icon {
     color: var(--primary-color);
 }
 
-.btn-primary:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 10px 30px rgba(255, 255, 255, 0.3);
-}
-
 .btn-secondary {
     background: transparent;
     color: white;
     border-color: white;
-}
-
-.btn-secondary:hover {
-    background: white;
-    color: var(--primary-color);
-    transform: translateY(-3px);
 }
 
 .scroll-indicator {
@@ -368,12 +348,6 @@ body.dark-mode .theme-toggle .moon-icon {
     padding: 2.5rem;
     border-radius: 16px;
     box-shadow: var(--shadow);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.skill-category-new:hover {
-    transform: translateY(-5px);
-    box-shadow: var(--shadow-hover);
 }
 
 .category-title {
@@ -397,24 +371,13 @@ body.dark-mode .theme-toggle .moon-icon {
     flex-direction: column;
     align-items: center;
     gap: 0.75rem;
-    transition: transform 0.3s ease;
     cursor: pointer;
-}
-
-.tech-icon:hover {
-    transform: translateY(-8px);
 }
 
 .tech-icon img {
     width: 60px;
     height: 60px;
     object-fit: contain;
-    transition: transform 0.3s ease, filter 0.3s ease;
-}
-
-.tech-icon:hover img {
-    transform: scale(1.1);
-    filter: drop-shadow(0 5px 15px rgba(102, 126, 234, 0.3));
 }
 
 .tech-icon span {
@@ -436,12 +399,6 @@ body.dark-mode .theme-toggle .moon-icon {
     padding: 2rem;
     border-radius: 12px;
     box-shadow: var(--shadow);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.skill-category:hover {
-    transform: translateY(-5px);
-    box-shadow: var(--shadow-hover);
 }
 
 .skill-category h3 {
@@ -617,12 +574,6 @@ body.dark-mode .theme-toggle .moon-icon {
     border-radius: 12px;
     overflow: hidden;
     box-shadow: var(--shadow);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.project-card:hover {
-    transform: translateY(-10px);
-    box-shadow: var(--shadow-hover);
 }
 
 .project-image {
@@ -814,15 +765,7 @@ body.dark-mode .theme-toggle .moon-icon {
     font-weight: 600;
     font-size: 1rem;
     border: 2px solid var(--primary-color);
-    transition: all 0.3s ease;
     box-shadow: var(--shadow);
-}
-
-.contact-btn:hover {
-    background: var(--primary-color);
-    color: white;
-    transform: translateY(-3px);
-    box-shadow: var(--shadow-hover);
 }
 
 .social-links {
@@ -838,13 +781,7 @@ body.dark-mode .theme-toggle .moon-icon {
     text-decoration: none;
     border-radius: 25px;
     font-weight: 600;
-    transition: all 0.3s ease;
     box-shadow: var(--shadow);
-}
-
-.social-link:hover {
-    transform: translateY(-3px);
-    box-shadow: var(--shadow-hover);
 }
 
 .contact-form {
@@ -1131,12 +1068,24 @@ body.dark-mode .section-title {
     border-bottom-color: #21262d;
 }
 
+body.dark-mode .about-text h3 {
+    color: #c9d1d9;
+}
+
 body.dark-mode .about-text p,
 body.dark-mode .about-info p {
-    color: #8b949e;
+    color: #c9d1d9;
 }
 
 body.dark-mode .info-item strong {
+    color: #c9d1d9;
+}
+
+body.dark-mode .about-list li {
+    color: #c9d1d9;
+}
+
+body.dark-mode .about-list a {
     color: #58a6ff;
 }
 
@@ -1152,10 +1101,6 @@ body.dark-mode .skill-category-new {
     box-shadow: none;
 }
 
-body.dark-mode .skill-category-new:hover {
-    border-color: #58a6ff;
-    transform: translateY(-5px);
-}
 
 body.dark-mode .skill-item,
 body.dark-mode .tech-icon span {
@@ -1171,11 +1116,6 @@ body.dark-mode .project-wrapper {
     background: #161b22;
     border: 1px solid #30363d;
     box-shadow: none;
-}
-
-body.dark-mode .project-card:hover,
-body.dark-mode .project-wrapper:hover {
-    border-color: #58a6ff;
 }
 
 body.dark-mode .project-title,
@@ -1242,12 +1182,6 @@ body.dark-mode .contact-btn {
     border-color: #30363d;
 }
 
-body.dark-mode .contact-btn:hover {
-    background: #21262d;
-    border-color: #58a6ff;
-    color: #58a6ff;
-}
-
 body.dark-mode .hamburger span {
     background: #c9d1d9;
 }
@@ -1265,21 +1199,10 @@ body.dark-mode .btn-primary {
     border-color: #238636;
 }
 
-body.dark-mode .btn-primary:hover {
-    background: #2ea043;
-    border-color: #2ea043;
-}
-
 body.dark-mode .btn-secondary {
     background: transparent;
     color: #c9d1d9;
     border-color: #30363d;
-}
-
-body.dark-mode .btn-secondary:hover {
-    background: #21262d;
-    border-color: #58a6ff;
-    color: #58a6ff;
 }
 
 body.dark-mode .hero-title {
@@ -1295,4 +1218,10 @@ body.dark-mode .highlight {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+}
+
+body.dark-mode .footer {
+    background: #0d1117;
+    color: #8b949e;
+    border-top: 1px solid #21262d;
 }
