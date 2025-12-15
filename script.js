@@ -92,26 +92,22 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
 // Contact form removed - no form handler needed
 
-// Typing effect for hero title (optional enhancement)
-const heroTitle = document.querySelector('.hero-title');
-if (heroTitle) {
-    const text = heroTitle.innerHTML;
-    heroTitle.innerHTML = '';
-    let index = 0;
-
-    function typeText() {
-        if (index < text.length) {
-            heroTitle.innerHTML += text.charAt(index);
-            index++;
-            setTimeout(typeText, 50);
-        }
-    }
-
-    // Uncomment to enable typing effect
-    // setTimeout(typeText, 500);
+// Email copy functionality
+const emailCopyBtn = document.getElementById('emailCopyBtn');
+if (emailCopyBtn) {
+    emailCopyBtn.addEventListener('click', function() {
+        const email = this.getAttribute('data-email');
+        navigator.clipboard.writeText(email).then(() => {
+            const originalText = this.textContent;
+            this.textContent = '복사됨!';
+            setTimeout(() => {
+                this.textContent = originalText;
+            }, 2000);
+        }).catch(err => {
+            console.error('복사 실패:', err);
+        });
+    });
 }
-
-
 
 // Console message for developers
 console.log('%c안녕하세요! 👋', 'color: #667eea; font-size: 20px; font-weight: bold;');
